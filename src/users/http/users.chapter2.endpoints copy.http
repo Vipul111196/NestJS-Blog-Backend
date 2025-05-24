@@ -1,0 +1,28 @@
+
+# Example of a method that returns all users
+GET http://localhost:3000/users
+
+# Example of a method that validates a parameter using a pipe
+GET http://localhost:3000/users/12345
+GET http://localhost:3000/users/12345?limit=10
+GET http://localhost:3000/users/12345?limit=10&page=20
+
+#  Example of a method that is used to create a new user using the POST method with a JSON body with DTO validation
+POST http://localhost:3000/users
+Content-Type: application/json
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john.doe@example.com",
+  "password": "password123"
+}
+
+GET http://localhost:3000/users
+GET http://localhost:3000/users/12345
+
+PATCH http://localhost:3000/users
+Content-Type: application/json
+{
+  "email": "john.doe@example.com",
+  "password": "password123"
+}

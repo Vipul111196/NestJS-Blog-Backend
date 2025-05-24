@@ -1,0 +1,12 @@
+
+# Example of a method that returns all users
+GET http://localhost:3000/users
+GET http://localhost:3000/users?limit=10&offset=20
+
+# Example of a method that returns a specific user by ID
+GET http://localhost:3000/users/12356
+
+# Example of a method that validates a parameter using a pipe
+GET http://localhost:3000/users
+GET http://localhost:3000/users/12345?limit=10
+GET http://localhost:3000/users/12345?limit=10&page=20

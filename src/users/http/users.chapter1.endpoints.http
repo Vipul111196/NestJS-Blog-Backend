@@ -1,0 +1,72 @@
+
+# Example of a method that returns all users
+GET http://localhost:3000/users
+
+# Example of a method where a parameter is mandatory
+GET http://localhost:3000/users/12345
+
+# Example of a method where a parameter is optional
+GET http://localhost:3000/users
+GET http://localhost:3000/users/12345
+
+# Example of a method that grabs a user by ID from params
+GET http://localhost:3000/users/12345
+
+# Example of a method that grabs where multiple parameters are passed one mandatory and one optional
+GET http://localhost:3000/users/12345/name
+GET http://localhost:3000/users/12345
+GET http://localhost:3000/users/name
+
+# Example of a method that grabs where both pararmeter and a query are passed
+GET http://localhost:3000/users/12345?limit=10
+GET http://localhost:3000/users/12345/vipul?limit=10
+GET http://localhost:3000/users/12346?limit=10&offset=20
+
+# Example of a method that grabs where both pararmeter and a query are passed in multiple lines for better readability
+
+GET http://localhost:3000/users/12345
+?limit=10
+&offset=20
+GET http://localhost:3000/users/12345/vipul
+?limit=10
+&offset=20
+
+# Example of a method that grabs specific param and specific query where both pararmeter and a query are passed
+GET http://localhost:3000/users/12345/vipul?limit=10&offset=20
+
+POST http://localhost:3000/users
+
+#  Example of a method that is used to create a new user using the POST method with a JSON body
+POST http://localhost:3000/users
+Content-Type: application/json
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com"
+}
+
+#  Example of a method that is used to create a new user using the POST method with a JSON body but the controller will parse only the specific fields
+POST http://localhost:3000/users
+Content-Type: application/json
+{
+  "name": "John Doe",
+  "email": "john.doe@example.com"
+}
+
+# Example of a method that is used to create a new user using the POST method with a form body
+POST http://localhost:3000/users
+Content-Type: application/x-www-form-urlencoded
+name=John Doe
+email=john.doe@example.com
+
+
+DELETE http://localhost:3000/users
+
+PUT http://localhost:3000/users
+{
+  "name": "John Doe",
+}
+
+PATCH http://localhost:3000/users
+{
+  "name": "John Doe",
+}

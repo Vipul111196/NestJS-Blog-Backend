@@ -1,0 +1,19 @@
+
+POST http://localhost:3000/posts
+Content-Type: application/json
+{
+  "title": "My first post",
+  "postType": "post",
+  "slug": "my-first-post",
+  "status": "draft",
+  "content": "test content",
+  "featuredImageUrl": "https://example.com/image.jpg",
+  "publishedOn": "2023-10-01T12:00:00Z",
+  "tags": ["nestjs", "typescript"],
+  "metaOptions": [
+    {
+      "key": "sidebarEnabled",
+      "value": "ok"
+    }
+  ]
+}
